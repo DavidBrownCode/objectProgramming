@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <!--<script>/*
+            var rate = 75;
+            var hour = 120;
+            var minute = 96;
+            var byTheMinute = {
+                hours: document.getElementById('mHour').Value,
+                minutes: document.getElementById('mMinute').Value,
+                time: myTime(this.hours, this.minutes),
+                rate: rate,
+                cost:myFunction(this.time, this.rate)
+            };        
+            var byTheHour = {
+                hours: document.getElementById('hHour').Value,
+                rate: rate,
+                cost:myFunction(this.hours, this.rate)
+            };            
+            var resultHour = myFunction(hour, rate);
+            var resultMinute = myFunction(minute, rate);
+            //document.getElementById("resultMinute").innerHTML = resultMinute;
+            //document.getElementById("resultHour").innerHTML = resultHour;
+            function myTime(a, b){
+                return (a * 60) + b;
+            }
+            function myFunction(a, b){
+                return (a/60)*b;
+            }*/
+             //var rate = 75;
+        //var hour = 120;
+        //var minute = 96;
+        var byTheMinute = {
+            hours: document.getElementById('mHour').value,
+            minutes: document.getElementById('mMinute').value,
+            time: function(){
+                return (this.hours * 60) + this.minutes; //original option taken to perform
+            }
+            //rate: rate,    commented out because rate wasa replaced with 75 in the function below.
+            cost:function(){
+                return (this.time / 60) * 75;
+            }
+        };        
+        var byTheHour = {
+            hours: document.getElementById('hHour').value,
+            //rate: rate,    commented out because rate wasa replaced with 75 in the function below.
+            cost:function(){  //method provided by w3schools.com
+                return this.hours * 75;
+            }
+        };            
+        //var resultHour = myFunction(hour, rate);
+        //var resultMinute = myFunction(minute, rate);
+        //document.getElementById("resultMinute").innerHTML = resultMinute;
+        //document.getElementById("resultHour").innerHTML = resultHour;
+        function myTime(a, b){
+            return (a * 60) + b;
+        }
+        function myFunction(a, b){
+            return (a/60)*b;
+        }
+            </script>-->
+    </head>
+    <center>
+        <table>
+            <tr id="byMinute">
+                <th><strong>By the Minute</strong></th>
+                <td id="minutes" value="96" ><input id="mHour" type="number" placeholder="Hours"> <input id="mMinute" type="number" placeholder="Minutes"></td>
+                <!--<td id="rate" value="75" ></td>-->
+                <td id="resultMinute">byTheMinute.cost<button onclick="document.getElementById('resultMinute').innerHTML = byTheMinute.cost()">Click Here</button></td>
+            </tr>
+            <tr id="byHour">
+                <th><strong>By the Hour</strong></th>
+                <td id="hours" value="120" ><input id="hHour" type="number" placeholder="Hours"> </td>
+                <!--<td id="rate" value="75" ></td>-->
+                <td id="resultHour">byTheHour.cost<button onclick="document.getElementById('resultHour').innerHTML =  byTheHour.cost()">Click Here</button></td>
+            </tr>
+        </table>
+        <!--<button onclick="myFunction()">Click Me!</button>-->
+    </center>
+</html>
+
+<!--<script>
+        //var rate = 75;
+        //var hour = 120;
+        //var minute = 96;
+        var byTheMinute = {
+            hours: document.getElementById('mHour').value,
+            minutes: document.getElementById('mMinute').value,
+            time: function(){
+                return (this.hours * 60) + this.minutes; //original option taken to perform
+            }
+            //rate: rate,    commented out because rate wasa replaced with 75 in the function below.
+            cost:function(){
+                return (this.time / 60) * 75;
+            }
+        };        
+        var byTheHour = {
+            hours: document.getElementById('hHour').value,
+            //rate: rate,    commented out because rate wasa replaced with 75 in the function below.
+            cost:function(){  //method provided by w3schools.com
+                return this.hours * 75;
+            }
+        };            
+        //var resultHour = myFunction(hour, rate);
+        //var resultMinute = myFunction(minute, rate);
+        //document.getElementById("resultMinute").innerHTML = resultMinute;
+        //document.getElementById("resultHour").innerHTML = resultHour;
+        function myTime(a, b){
+            return (a * 60) + b;
+        }
+        function myFunction(a, b){
+            return (a/60)*b;
+        }
+        </script>-->
